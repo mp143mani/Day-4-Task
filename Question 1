@@ -1,0 +1,10 @@
+let obj1 = {Name: "Person 1", Age: 5};
+let obj2 = {Age: 5, Name: "Person 1"};
+
+function json (obj1, obj2) {
+  let OBJ1 = JSON.stringify(obj1, Object.keys(obj1).sort());
+  let OBJ2 = JSON.stringify(obj2, Object.keys(obj2).sort());
+  return (OBJ1 === OBJ2);
+}
+
+console.log(json(obj1, obj2)); 
